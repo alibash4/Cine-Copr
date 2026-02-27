@@ -175,3 +175,15 @@ statuspage box {
 #options dropdown button * {
   background: none;
 }
+
+.chapter-popover contents {
+  padding: 2px;
+}
+.chapter-popover label {
+  padding: 6px;
+}
+.chapter-popover picture {
+  border-radius: 12px;
+  margin: 0px;
+  margin-bottom: 3px;
+}

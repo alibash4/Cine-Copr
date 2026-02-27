@@ -66,6 +66,7 @@ class Preferences(Adw.Dialog):
     subtitle_scale_row: Adw.SpinRow = Gtk.Template.Child()
     subtitle_lang_row: Adw.EntryRow = Gtk.Template.Child()
     audio_lang_row: Adw.EntryRow = Gtk.Template.Child()
+    thumb_preview_row: Adw.SwitchRow = Gtk.Template.Child()
     hwdec_row: Adw.SwitchRow = Gtk.Template.Child()
     normalize_volume_row: Adw.SwitchRow = Gtk.Template.Child()
     save_position_switch: Gtk.Switch = Gtk.Template.Child()
@@ -130,6 +131,12 @@ class Preferences(Adw.Dialog):
             Gio.SettingsBindFlags.DEFAULT,
         )
         settings.bind(
+            "thumbnail-preview",
+            self.thumb_preview_row,
+            "active",
+            Gio.SettingsBindFlags.DEFAULT,
+        )
+        settings.bind(
             "normalize-volume",
             self.normalize_volume_row,
             "active",
@@ -149,6 +156,7 @@ class Preferences(Adw.Dialog):
             "subtitle-font": self._on_sub_font_changed,
             "subtitle-languages": self._on_slang_changed,
             "audio-languages": self._on_alang_changed,
+            "thumbnail-preview": self._on_thumb_preview_changed,
             "hwdec": self._on_hwdec_changed,
             "normalize-volume": self._on_norm_volume_changed,
             "save-video-position": self._on_save_pos_changed,
@@ -177,6 +185,15 @@ class Preferences(Adw.Dialog):
 
     def _on_alang_changed(self, settings, _key):
         self.player["alang"] = settings.get_string("audio-languages")
+
+    def _on_thumb_preview_changed(self, settings, key):
+        if not settings.get_boolean(key) and self.win.preview_player:
+            self.win.preview_player.terminate()
+            self.win.preview_player = None
+            self.win.thumb_preview.props.visible = False
+        elif not self.player.idle_active:
+            self.win.setup_preview_player()
+            self.win.thumb_preview.props.visible = True
 
     def _on_save_pos_changed(self, settings, _key):
         self.player["save-position-on-quit"] = settings.get_boolean(

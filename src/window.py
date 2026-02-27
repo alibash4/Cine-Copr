@@ -147,6 +147,8 @@ class CineWindow(Adw.ApplicationWindow):
         self.click_holding = False
         self.prev_speed: float = 1.0
         self.hide_icon_indicator: bool = True
+        self.preview_player: mpv.MPV | None = None
+        self.update_preview_id: int = 0
 
         self.mpv_ctx: mpv.MpvRenderContext
 
@@ -307,12 +309,25 @@ class CineWindow(Adw.ApplicationWindow):
         self.chapter_popover.set_parent(self.vid_progress_scale_box)
         self.chapter_popover.set_autohide(False)
 
+        self.chapter_popover.add_css_class("chapter-popover")
+
+        self.popover_content_box = Gtk.Box()
+        self.popover_content_box.props.orientation = Gtk.Orientation.VERTICAL
+
+        self.thumb_preview = Gtk.Picture()
+        self.thumb_preview.set_valign(Gtk.Align.START)
+        self.thumb_preview.set_content_fit(Gtk.ContentFit.SCALE_DOWN)
+        self.thumb_preview.set_halign(Gtk.Align.CENTER)
+        self.popover_content_box.append(self.thumb_preview)
+
         self.chapter_popover_label = Gtk.Label()
         self.chapter_popover_label.set_use_markup(True)
         self.chapter_popover_label.set_justify(Gtk.Justification.CENTER)
         self.chapter_popover_label.set_xalign(0.5)
         self.chapter_popover_label.add_css_class("numeric")
-        self.chapter_popover.set_child(self.chapter_popover_label)
+
+        self.popover_content_box.append(self.chapter_popover_label)
+        self.chapter_popover.set_child(self.popover_content_box)
 
         self.gl_area.connect("realize", self._on_realize_area)
         self.gl_area.connect("render", self._on_render_area)
@@ -683,9 +698,101 @@ class CineWindow(Adw.ApplicationWindow):
         self._show_ui()
         self.audio_tracks_menu_button.popup()
 
+    def setup_preview_player(self):
+        try:
+            params = cast(dict, self.mpv.video_params)
+            v_width = params.get("w") or 1920
+            v_height = params.get("h") or 1080
+        except:
+            v_width, v_height = 1920, 1080
+
+        if v_width >= v_height:
+            # Horizontal or square
+            width = 200
+            height = int((v_height / v_width) * width)
+        else:
+            # Vertical
+            height = 200
+            width = int((v_width / v_height) * height)
+
+        if self.preview_player is None:
+            self.preview_player = mpv.MPV(
+                vo="null",
+                ao="null",
+                hwdec=self.mpv.hwdec,
+                ytdl=False,
+                cache=False,
+                config=False,
+                osc=False,
+                terminal=False,
+                load_scripts=False,
+                msg_level="all=no",
+                vd_lavc_skiploopfilter="all",
+                vd_lavc_fast=True,
+                vd_lavc_software_fallback=1,
+                # scale threads for 8K
+                vd_lavc_threads=4 if v_width > 4000 else 2,
+                sws_scaler="bilinear",
+                demuxer_readahead_secs=0,
+                demuxer_max_bytes="128KiB",
+                hr_seek="no",
+                gpu_dumb_mode="yes",
+                pause=True,
+            )
+
+        self.preview_player.loadfile(self.mpv.path, "replace")
+        self.preview_player["vf"] = (
+            f"scale={width}:{height}:force_original_aspect_ratio=decrease,format=bgra"
+        )
+
+        @self.preview_player.property_observer("time-pos")
+        def pos_observer(_name, pos):
+            if hasattr(self, "hover_time") and pos:
+
+                def on_screenshot_ready(_, result):
+                    if result is None:
+                        self.thumb_preview.props.visible = False
+                        return
+
+                    GLib.idle_add(self._apply_preview_texture, result)
+
+                if self.preview_player:
+                    self.preview_player.command_async(
+                        "screenshot-raw",
+                        callback=on_screenshot_ready,
+                    )
+
+    def _update_video_preview(self):
+        if self.preview_player is None or not self.preview_player.path:
+            return
+
+        def seek():
+            try:
+                if self.preview_player:
+                    self.preview_player.seek(self.hover_time, reference="absolute")
+            except:
+                pass
+
+        GLib.idle_add(seek)
+
+    def _apply_preview_texture(self, res):
+        try:
+            texture = Gdk.MemoryTexture.new(
+                res["w"],
+                res["h"],
+                Gdk.MemoryFormat.B8G8R8A8,
+                GLib.Bytes.new(res["data"]),
+                res["stride"],
+            )
+            self.thumb_preview.props.paintable = texture
+        except Exception as e:
+            self.thumb_preview.props.visible = False
+            print(f"Preview texture error: {e}")
+
     def _on_progress_motion(self, _controller, x, y):
         if (x, y) == self.prev_prog_motion_xy:
             return
+
         self.prev_prog_motion_xy = (x, y)
 
         width = self.video_progress_scale.get_width()
@@ -694,20 +801,21 @@ class CineWindow(Adw.ApplicationWindow):
             return
 
         percentage = max(0, min(1, x / width))
-        hover_time = percentage * duration
+        self.hover_time = percentage * duration
+
         target_chapter = None
         if self.current_chapters:
             for chapter in self.current_chapters:
-                if chapter.get("time", 0) <= hover_time:
+                if chapter.get("time", 0) <= self.hover_time:
                     target_chapter = chapter
                 else:
                     break
 
-        time_str = format_time(hover_time)
+        time_str = format_time(self.hover_time)
         if target_chapter:
-            title = target_chapter.get("title") or "Chapter"
-            escaped_title = GLib.markup_escape_text(title)
-            markup = f"<b>{escaped_title}</b>\n{time_str}"
+            title = target_chapter.get("title") or _("Chapter")
+            title = GLib.markup_escape_text(title)
+            markup = f"<b>{title}</b>\n{time_str}"
         else:
             markup = f"{time_str}"
 
@@ -722,6 +830,19 @@ class CineWindow(Adw.ApplicationWindow):
 
         self.chapter_popover.set_pointing_to(rect)
         self.chapter_popover.popup()
+
+        if not settings.get_boolean("thumbnail-preview"):
+            return
+
+        if self.update_preview_id > 0:
+            GLib.source_remove(self.update_preview_id)
+            self.update_preview_id = 0
+
+        def update_preview():
+            self.update_preview_id = 0
+            self._update_video_preview()
+
+        self.update_preview_id = GLib.timeout_add(200, update_preview)
 
     def _on_progress_scroll(self, controller, _dx, dy):
         event: Gdk.ScrollEvent = controller.get_current_event()
@@ -1267,6 +1388,13 @@ class CineWindow(Adw.ApplicationWindow):
         @self.mpv.event_callback("file-loaded")
         def on_files_loaded(event):
             GLib.idle_add(self.spinner.set_visible, False)
+            if settings.get_boolean("thumbnail-preview"):
+                self.setup_preview_player()
+                self.thumb_preview.props.visible = True
+            elif self.preview_player:
+                self.thumb_preview.props.visible = False
+                self.preview_player.terminate()
+                self.preview_player = None
 
         @self.mpv.event_callback("end-file")
         def on_end_file(event):
