@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: io.github.diegopvlk.Cine\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-23 17:21-0300\n"
-"PO-Revision-Date: 2026-02-22 12:09+0000\n"
-"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
+"PO-Revision-Date: 2026-02-27 21:38+0000\n"
+"Last-Translator: avds <avds@disroot.org>\n"
 "Language-Team: Persian <https://hosted.weblate.org/projects/cine/app/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
@@ -91,7 +91,7 @@ msgstr "پنجرهٔ اصلی"
 #. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
 #: src/main.py:220
 msgid "translator-credits"
-msgstr "آوید <avdsrj.ir>"
+msgstr "آوید <avds@disroot.org>"
 
 #: src/mpris.py:153 src/mpris.py:221 src/mpris.py:356
 msgid "Unknown title"
@@ -259,7 +259,7 @@ msgstr "حلقه"
 
 #: src/shortcuts.py:85 src/window.blp:315
 msgid "Loop File"
-msgstr "پروندهٔ حلقه"
+msgstr "حلقه کردن پرونده"
 
 #: src/shortcuts.py:86 src/shortcuts.py:87 src/options.blp:281
 #: src/options.blp:304
@@ -505,7 +505,7 @@ msgstr "سرعت پخش"
 
 #: src/playlist.blp:5 src/window.blp:325
 msgid "Playlist"
-msgstr "فهرست پخش"
+msgstr "سیاههٔ پخش"
 
 #: src/playlist.blp:84
 msgid "Add to Playlist"
