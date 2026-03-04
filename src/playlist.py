@@ -146,9 +146,11 @@ class Playlist(Adw.Dialog):
             row.props.activatable = True
 
             icon_name = "cine-applications-multimedia-symbolic"
+            file_title = os.path.splitext(path_with_ext)[0]
 
             if not is_local_path(path):
                 content_type = "mpv-url"
+                file_title = item.get("title") or file_title
             else:
                 info = Gio.File.new_for_path(path).query_info(
                     "standard::content-type", Gio.FileQueryInfoFlags.NONE, None
@@ -170,8 +172,6 @@ class Playlist(Adw.Dialog):
                     icon_name = "cine-image-x-generic-symbolic"
                 elif content_type == "mpv-url":
                     icon_name = "cine-globe-symbolic"
-
-                file_title = os.path.splitext(path_with_ext)[0]
 
             file_title = GLib.markup_escape_text(file_title)
             row.set_subtitle(file_title)
