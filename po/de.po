@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.diegopvlk.Cine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-05 10:02-0300\n"
+"POT-Creation-Date: 2026-03-14 15:35-0300\n"
 "PO-Revision-Date: 2026-02-28 11:40-0300\n"
 "Last-Translator: Gryfin <weblate@gryfin.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/cine/app/de/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Weblate 5.16-dev\n"
 
 #: data/io.github.diegopvlk.Cine.desktop.in:2 src/main.py:210 src/mpris.py:146
-#: src/mpris.py:364 src/window.py:166 src/window.py:271 src/window.py:1694
+#: src/mpris.py:364 src/window.py:167 src/window.py:275 src/window.py:1711
 #: src/window.blp:6
 msgid "Cine"
 msgstr "Cine"
@@ -103,17 +103,17 @@ msgstr "Unbekannter Titel"
 msgid "Original"
 msgstr "Original"
 
-#: src/playlist.py:73 src/window.py:1176 src/window.py:1542
+#: src/playlist.py:73 src/window.py:1179 src/window.py:1556
 msgid "File Error"
 msgstr "Dateifehler"
 
-#: src/playlist.py:214 src/window.py:631 src/playlist.blp:24 src/window.blp:99
+#: src/playlist.py:219 src/window.py:634 src/playlist.blp:24 src/window.blp:99
 msgid "Add Files"
 msgstr "Dateien hinzufügen"
 
 #: src/shortcuts.py:29 src/shortcuts.py:30 src/shortcuts.py:31
 #: src/shortcuts.py:32 src/shortcuts.py:82 src/shortcuts.py:83
-#: src/window.py:1623 src/window.blp:215
+#: src/window.py:1640 src/window.blp:215
 msgid "Volume"
 msgstr "Lautstärke"
 
@@ -147,7 +147,7 @@ msgstr "Nächste Untertitelspur"
 msgid "Switch to Previous Subtitle Track"
 msgstr "Vorherige Untertitelspur"
 
-#: src/shortcuts.py:39 src/shortcuts.py:40 src/window.py:655 src/window.blp:272
+#: src/shortcuts.py:39 src/shortcuts.py:40 src/window.py:658 src/window.blp:272
 msgid "Audio"
 msgstr "Audio"
 
@@ -175,7 +175,7 @@ msgstr "Springe 5s rückwärts"
 msgid "Seek 5s Forward"
 msgstr "Springe 5s vorwärts"
 
-#: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:1572
+#: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:1589
 #: src/window.blp:350
 msgid "Fullscreen"
 msgstr "Vollbild"
@@ -376,85 +376,85 @@ msgstr "Wiedergabe"
 msgid "Miscellaneous"
 msgstr "Verschiedenes"
 
-#: src/window.py:508 src/window.py:1168 src/window.blp:114
+#: src/window.py:511 src/window.py:1171 src/window.blp:114
 msgid "Add Subtitle Track"
 msgstr "Untertitelspur hinzufügen"
 
-#: src/window.py:510 src/window.py:519
+#: src/window.py:513 src/window.py:522
 msgid "None"
 msgstr "Keine"
 
-#: src/window.py:517 src/window.blp:119
+#: src/window.py:520 src/window.blp:119
 msgid "Add Audio Track"
 msgstr "Audiospur hinzufügen"
 
-#: src/window.py:556
+#: src/window.py:559
 msgid "Track"
 msgstr "Spur"
 
-#: src/window.py:599 src/playlist.blp:30 src/window.blp:104
+#: src/window.py:602 src/playlist.blp:30 src/window.blp:104
 msgid "Add Folder"
 msgstr "Ordner hinzufügen"
 
-#: src/window.py:599 src/shortcuts-dialog.blp:21 src/window.blp:89
+#: src/window.py:602 src/shortcuts-dialog.blp:21 src/window.blp:89
 #: src/window.blp:452
 msgid "Open Folder"
 msgstr "Ordner öffnen"
 
-#: src/window.py:628 src/shortcuts-dialog.blp:16 src/window.blp:84
+#: src/window.py:631 src/shortcuts-dialog.blp:16 src/window.blp:84
 msgid "Open Files"
 msgstr "Dateien öffnen"
 
-#: src/window.py:634
+#: src/window.py:637
 msgid "Add Subtitle"
 msgstr "Untertitel hinzufügen"
 
-#: src/window.py:637
+#: src/window.py:640
 msgid "Add Audio"
 msgstr "Audio hinzufügen"
 
-#: src/window.py:650
+#: src/window.py:653
 msgid "Subtitle"
 msgstr "Untertitel"
 
-#: src/window.py:659
+#: src/window.py:662
 msgid "Media"
 msgstr "Medien"
 
-#: src/window.py:720 src/playlist.blp:36 src/window.blp:109
+#: src/window.py:723 src/playlist.blp:36 src/window.blp:109
 msgid "Add URL"
 msgstr "URL hinzufügen"
 
-#: src/window.py:720 src/shortcuts-dialog.blp:26 src/window.blp:94
+#: src/window.py:723 src/shortcuts-dialog.blp:26 src/window.blp:94
 #: src/window.blp:462
 msgid "Open URL"
 msgstr "URL öffnen"
 
-#: src/window.py:733
+#: src/window.py:736
 msgid "URL"
 msgstr "URL"
 
-#: src/window.py:741
+#: src/window.py:744
 msgid "Add"
 msgstr "Hinzufügen"
 
-#: src/window.py:741 src/window.blp:78
+#: src/window.py:744 src/window.blp:78
 msgid "Open"
 msgstr "Öffnen"
 
-#: src/window.py:914
+#: src/window.py:917
 msgid "Chapter"
 msgstr "Kapitel"
 
-#: src/window.py:1067
+#: src/window.py:1070
 msgid "Pause"
 msgstr "Pause"
 
-#: src/window.py:1067 src/window.py:1172
+#: src/window.py:1070 src/window.py:1175
 msgid "Play"
 msgstr "Abspielen"
 
-#: src/window.py:1572
+#: src/window.py:1589
 msgid "Exit Fullscreen"
 msgstr "Vollbild verlassen"
 

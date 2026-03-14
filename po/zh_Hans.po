@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.diegopvlk.Cine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-05 10:02-0300\n"
+"POT-Creation-Date: 2026-03-14 15:35-0300\n"
 "PO-Revision-Date: 2026-03-12 12:52+0000\n"
 "Last-Translator: 心就在那里 <xjznlonly@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Weblate 5.17-dev\n"
 
 #: data/io.github.diegopvlk.Cine.desktop.in:2 src/main.py:210 src/mpris.py:146
-#: src/mpris.py:364 src/window.py:166 src/window.py:271 src/window.py:1694
+#: src/mpris.py:364 src/window.py:167 src/window.py:275 src/window.py:1711
 #: src/window.blp:6
 msgid "Cine"
 msgstr "Cine"
@@ -96,17 +96,17 @@ msgstr "未知标题"
 msgid "Original"
 msgstr "原始"
 
-#: src/playlist.py:73 src/window.py:1176 src/window.py:1542
+#: src/playlist.py:73 src/window.py:1179 src/window.py:1556
 msgid "File Error"
 msgstr "文件错误"
 
-#: src/playlist.py:214 src/window.py:631 src/playlist.blp:24 src/window.blp:99
+#: src/playlist.py:219 src/window.py:634 src/playlist.blp:24 src/window.blp:99
 msgid "Add Files"
 msgstr "添加文件"
 
 #: src/shortcuts.py:29 src/shortcuts.py:30 src/shortcuts.py:31
 #: src/shortcuts.py:32 src/shortcuts.py:82 src/shortcuts.py:83
-#: src/window.py:1623 src/window.blp:215
+#: src/window.py:1640 src/window.blp:215
 msgid "Volume"
 msgstr "音量"
 
@@ -140,7 +140,7 @@ msgstr "切换到下一个字幕轨道"
 msgid "Switch to Previous Subtitle Track"
 msgstr "切换到上一个字幕轨道"
 
-#: src/shortcuts.py:39 src/shortcuts.py:40 src/window.py:655 src/window.blp:272
+#: src/shortcuts.py:39 src/shortcuts.py:40 src/window.py:658 src/window.blp:272
 msgid "Audio"
 msgstr "音频"
 
@@ -168,7 +168,7 @@ msgstr "后退 5 秒"
 msgid "Seek 5s Forward"
 msgstr "前进 5 秒"
 
-#: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:1572
+#: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:1589
 #: src/window.blp:350
 msgid "Fullscreen"
 msgstr "全屏"
@@ -369,85 +369,85 @@ msgstr "回放"
 msgid "Miscellaneous"
 msgstr "杂项"
 
-#: src/window.py:508 src/window.py:1168 src/window.blp:114
+#: src/window.py:511 src/window.py:1171 src/window.blp:114
 msgid "Add Subtitle Track"
 msgstr "添加字幕轨道"
 
-#: src/window.py:510 src/window.py:519
+#: src/window.py:513 src/window.py:522
 msgid "None"
 msgstr "无"
 
-#: src/window.py:517 src/window.blp:119
+#: src/window.py:520 src/window.blp:119
 msgid "Add Audio Track"
 msgstr "添加音轨"
 
-#: src/window.py:556
+#: src/window.py:559
 msgid "Track"
 msgstr "轨道"
 
-#: src/window.py:599 src/playlist.blp:30 src/window.blp:104
+#: src/window.py:602 src/playlist.blp:30 src/window.blp:104
 msgid "Add Folder"
 msgstr "添加文件夹"
 
-#: src/window.py:599 src/shortcuts-dialog.blp:21 src/window.blp:89
+#: src/window.py:602 src/shortcuts-dialog.blp:21 src/window.blp:89
 #: src/window.blp:452
 msgid "Open Folder"
 msgstr "打开文件夹"
 
-#: src/window.py:628 src/shortcuts-dialog.blp:16 src/window.blp:84
+#: src/window.py:631 src/shortcuts-dialog.blp:16 src/window.blp:84
 msgid "Open Files"
 msgstr "打开文件"
 
-#: src/window.py:634
+#: src/window.py:637
 msgid "Add Subtitle"
 msgstr "添加字幕"
 
-#: src/window.py:637
+#: src/window.py:640
 msgid "Add Audio"
 msgstr "添加音频"
 
-#: src/window.py:650
+#: src/window.py:653
 msgid "Subtitle"
 msgstr "字幕"
 
-#: src/window.py:659
+#: src/window.py:662
 msgid "Media"
 msgstr "媒体"
 
-#: src/window.py:720 src/playlist.blp:36 src/window.blp:109
+#: src/window.py:723 src/playlist.blp:36 src/window.blp:109
 msgid "Add URL"
 msgstr "添加 URL"
 
-#: src/window.py:720 src/shortcuts-dialog.blp:26 src/window.blp:94
+#: src/window.py:723 src/shortcuts-dialog.blp:26 src/window.blp:94
 #: src/window.blp:462
 msgid "Open URL"
 msgstr "打开 URL"
 
-#: src/window.py:733
+#: src/window.py:736
 msgid "URL"
 msgstr "URL"
 
-#: src/window.py:741
+#: src/window.py:744
 msgid "Add"
 msgstr "添加"
 
-#: src/window.py:741 src/window.blp:78
+#: src/window.py:744 src/window.blp:78
 msgid "Open"
 msgstr "打开"
 
-#: src/window.py:914
+#: src/window.py:917
 msgid "Chapter"
 msgstr "章节"
 
-#: src/window.py:1067
+#: src/window.py:1070
 msgid "Pause"
 msgstr "暂停"
 
-#: src/window.py:1067 src/window.py:1172
+#: src/window.py:1070 src/window.py:1175
 msgid "Play"
 msgstr "播放"
 
-#: src/window.py:1572
+#: src/window.py:1589
 msgid "Exit Fullscreen"
 msgstr "退出全屏"
 
