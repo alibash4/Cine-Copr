@@ -954,7 +954,7 @@ class CineWindow(Adw.ApplicationWindow):
     def _on_progress_scroll(self, controller, _dx, dy):
         event: Gdk.ScrollEvent = controller.get_current_event()
         direction: Gdk.ScrollDirection = event.get_direction()
-        rel_dir: Gdk.ScrollRelativeDirection = event.get_relative_direction(event)  # type: ignore
+        rel_dir: Gdk.ScrollRelativeDirection = event.get_relative_direction()  # type: ignore
         is_natural: bool = rel_dir == Gdk.ScrollRelativeDirection.INVERTED  # type: ignore
         step = dy if direction == Gdk.ScrollDirection.SMOOTH else dy * 10
 
@@ -1361,7 +1361,7 @@ class CineWindow(Adw.ApplicationWindow):
 
     def _on_mouse_scroll(self, controller, dx, dy):
         event: Gdk.ScrollEvent = controller.get_current_event()
-        rel_dir: Gdk.ScrollRelativeDirection = event.get_relative_direction(event)  # type: ignore
+        rel_dir: Gdk.ScrollRelativeDirection = event.get_relative_direction()  # type: ignore
         is_natural: bool = rel_dir == Gdk.ScrollRelativeDirection.INVERTED  # type: ignore
         UP: str = "WHEEL_DOWN" if is_natural else "WHEEL_UP"
         DOWN: str = "WHEEL_UP" if is_natural else "WHEEL_DOWN"
@@ -1382,7 +1382,7 @@ class CineWindow(Adw.ApplicationWindow):
     def _on_mouse_scroll_volume(self, controller, _dx, dy):
         event: Gdk.ScrollEvent = controller.get_current_event()
         direction: Gdk.ScrollDirection = event.get_direction()
-        rel_dir: Gdk.ScrollRelativeDirection = event.get_relative_direction(event)  # type: ignore
+        rel_dir: Gdk.ScrollRelativeDirection = event.get_relative_direction()  # type: ignore
         is_natural: bool = rel_dir == Gdk.ScrollRelativeDirection.INVERTED  # type: ignore
         max_vol = cast(float, self.mpv.volume_max)
         step = dy if direction == Gdk.ScrollDirection.SMOOTH else dy * 5
