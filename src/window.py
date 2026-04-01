@@ -1262,10 +1262,9 @@ class CineWindow(Adw.ApplicationWindow):
             self._hide_ui_timeout(s=3)
             return
 
-        app: Gtk.Application | None = self.get_application()
         clean_state = state & Gtk.accelerator_get_default_mod_mask()
         accel_name = Gtk.accelerator_name(keyval, clean_state)
-        if app and app.get_actions_for_accel(accel_name):
+        if self.app.get_actions_for_accel(accel_name):
             return
 
         mpv_key = KEY_REMAP.get(key_name, key_name)
