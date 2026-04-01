@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.diegopvlk.Cine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-14 15:35-0300\n"
+"POT-Creation-Date: 2026-04-01 10:52-0300\n"
 "PO-Revision-Date: 2026-02-28 11:40-0300\n"
 "Last-Translator: Diego Povliuk <diegopvlk@gmail.com>\n"
 "Language-Team: Spanish\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/io.github.diegopvlk.Cine.desktop.in:2 src/main.py:210 src/mpris.py:146
-#: src/mpris.py:364 src/window.py:167 src/window.py:275 src/window.py:1711
+#: src/mpris.py:364 src/window.py:167 src/window.py:275 src/window.py:1710
 #: src/window.blp:6
 msgid "Cine"
 msgstr "Cine"
@@ -102,17 +102,25 @@ msgstr "Título desconocido"
 msgid "Original"
 msgstr "Original"
 
-#: src/playlist.py:73 src/window.py:1179 src/window.py:1556
+#: src/playlist.py:73 src/window.py:1179 src/window.py:1555
 msgid "File Error"
 msgstr "Error de Archivo"
 
-#: src/playlist.py:219 src/window.py:634 src/playlist.blp:24 src/window.blp:99
+#: src/playlist.py:240
+msgid "Open Item Location"
+msgstr "Abrir Ubicación del Ítem"
+
+#: src/playlist.py:241
+msgid "Remove from Playlist"
+msgstr "Eliminar de la Lista de Reproducción"
+
+#: src/playlist.py:299 src/window.py:634 src/playlist.blp:24 src/window.blp:99
 msgid "Add Files"
 msgstr "Añadir Archivos"
 
 #: src/shortcuts.py:29 src/shortcuts.py:30 src/shortcuts.py:31
 #: src/shortcuts.py:32 src/shortcuts.py:82 src/shortcuts.py:83
-#: src/window.py:1640 src/window.blp:215
+#: src/window.py:1639 src/window.blp:215
 msgid "Volume"
 msgstr "Volumen"
 
@@ -174,7 +182,7 @@ msgstr "Retroceder 5s"
 msgid "Seek 5s Forward"
 msgstr "Adelantar 5s"
 
-#: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:1589
+#: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:1588
 #: src/window.blp:350
 msgid "Fullscreen"
 msgstr "Pantalla Completa"
@@ -453,7 +461,7 @@ msgstr "Pausar"
 msgid "Play"
 msgstr "Reproducir"
 
-#: src/window.py:1589
+#: src/window.py:1588
 msgid "Exit Fullscreen"
 msgstr "Salir de pantalla completa"
 
