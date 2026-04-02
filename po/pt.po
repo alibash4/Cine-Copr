@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: io.github.diegopvlk.Cine\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-02 10:52-0300\n"
-"PO-Revision-Date: 2026-02-28 11:40-0300\n"
-"Last-Translator: Diego Povliuk <diegopvlk@gmail.com>\n"
-"Language-Team: Portuguese\n"
+"PO-Revision-Date: 2026-04-03 15:09+0000\n"
+"Last-Translator: Diego Povliuk <diego.pvlk@gmail.com>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/cine/app/pt/>"
+"\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: data/io.github.diegopvlk.Cine.desktop.in:2 src/main.py:210 src/mpris.py:146
 #: src/mpris.py:364 src/window.py:169 src/window.py:280 src/window.py:1743
@@ -421,7 +423,7 @@ msgstr "Adicionar Áudio"
 
 #: src/window.py:653
 msgid "Subtitle"
-msgstr "Legendas"
+msgstr "Legenda"
 
 #: src/window.py:662
 msgid "Media"
