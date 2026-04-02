@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.diegopvlk.Cine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-01 10:52-0300\n"
+"POT-Creation-Date: 2026-04-02 10:52-0300\n"
 "PO-Revision-Date: 2026-02-28 11:40-0300\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Poedit 3.8\n"
 
 #: data/io.github.diegopvlk.Cine.desktop.in:2 src/main.py:210 src/mpris.py:146
-#: src/mpris.py:364 src/window.py:167 src/window.py:275 src/window.py:1710
+#: src/mpris.py:364 src/window.py:169 src/window.py:280 src/window.py:1743
 #: src/window.blp:6
 msgid "Cine"
 msgstr "Cine"
@@ -103,7 +103,7 @@ msgstr "Bilinmeyen başlık"
 msgid "Original"
 msgstr "Özgün"
 
-#: src/playlist.py:73 src/window.py:1179 src/window.py:1555
+#: src/playlist.py:73 src/window.py:1207 src/window.py:1583
 msgid "File Error"
 msgstr "Dosya Hatası"
 
@@ -117,13 +117,13 @@ msgstr ""
 msgid "Remove from Playlist"
 msgstr "Oynatma Listesi Döngüsü"
 
-#: src/playlist.py:299 src/window.py:634 src/playlist.blp:24 src/window.blp:99
+#: src/playlist.py:300 src/window.py:634 src/playlist.blp:24 src/window.blp:99
 msgid "Add Files"
 msgstr "Dosya Ekle"
 
 #: src/shortcuts.py:29 src/shortcuts.py:30 src/shortcuts.py:31
 #: src/shortcuts.py:32 src/shortcuts.py:82 src/shortcuts.py:83
-#: src/window.py:1639 src/window.blp:215
+#: src/window.py:1667 src/window.blp:215
 msgid "Volume"
 msgstr "Ses"
 
@@ -185,8 +185,8 @@ msgstr "5 sn Geri Sar"
 msgid "Seek 5s Forward"
 msgstr "5 sn İleri Sar"
 
-#: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:1588
-#: src/window.blp:350
+#: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:1616
+#: src/window.blp:364
 msgid "Fullscreen"
 msgstr "Tam Ekran"
 
@@ -294,7 +294,7 @@ msgstr "İstatistik Genel Görünümü"
 msgid "Loop"
 msgstr "Döngü"
 
-#: src/shortcuts.py:89 src/window.blp:325
+#: src/shortcuts.py:89 src/window.blp:339
 msgid "Loop File"
 msgstr "Dosya Döngüsü"
 
@@ -386,7 +386,7 @@ msgstr "Oynatma"
 msgid "Miscellaneous"
 msgstr "Çeşitli"
 
-#: src/window.py:511 src/window.py:1171 src/window.blp:114
+#: src/window.py:511 src/window.py:1199 src/window.blp:114
 msgid "Add Subtitle Track"
 msgstr "Alt Yazı Parçası Ekle"
 
@@ -407,7 +407,7 @@ msgid "Add Folder"
 msgstr "Klasör Ekle"
 
 #: src/window.py:602 src/shortcuts-dialog.blp:21 src/window.blp:89
-#: src/window.blp:452
+#: src/window.blp:466
 msgid "Open Folder"
 msgstr "Klasör Aç"
 
@@ -431,40 +431,40 @@ msgstr "Alt Yazı"
 msgid "Media"
 msgstr "Ortam"
 
-#: src/window.py:723 src/playlist.blp:36 src/window.blp:109
+#: src/window.py:729 src/playlist.blp:36 src/window.blp:109
 msgid "Add URL"
 msgstr "URL Ekle"
 
-#: src/window.py:723 src/shortcuts-dialog.blp:26 src/window.blp:94
-#: src/window.blp:462
+#: src/window.py:729 src/shortcuts-dialog.blp:26 src/window.blp:94
+#: src/window.blp:476
 msgid "Open URL"
 msgstr "URL Aç"
 
-#: src/window.py:736
+#: src/window.py:742
 msgid "URL"
 msgstr "URL"
 
-#: src/window.py:744
+#: src/window.py:750
 msgid "Add"
 msgstr "Ekle"
 
-#: src/window.py:744 src/window.blp:78
+#: src/window.py:750 src/window.blp:78
 msgid "Open"
 msgstr "Aç"
 
-#: src/window.py:917
+#: src/window.py:923 src/window.py:1040
 msgid "Chapter"
 msgstr "Bölüme"
 
-#: src/window.py:1070
+#: src/window.py:1098
 msgid "Pause"
 msgstr "Duraklat"
 
-#: src/window.py:1070 src/window.py:1175
+#: src/window.py:1098 src/window.py:1203
 msgid "Play"
 msgstr "Oynat"
 
-#: src/window.py:1588
+#: src/window.py:1616
 msgid "Exit Fullscreen"
 msgstr "Tam Ekrandan Çık"
 
@@ -565,7 +565,7 @@ msgstr "Ses Gecikmesini Sıfırla"
 msgid "Playback Speed"
 msgstr "Oynatma Hızı"
 
-#: src/playlist.blp:5 src/window.blp:335
+#: src/playlist.blp:5 src/window.blp:349
 msgid "Playlist"
 msgstr "Oynatma Listesi"
 
@@ -655,14 +655,20 @@ msgid "Open Audio Menu"
 msgstr "Ses Menüsünü Aç"
 
 #: src/shortcuts-dialog.blp:56
+#, fuzzy
+#| msgid "Open Subtitles Menu"
+msgid "Open Chapters Menu"
+msgstr "Alt Yazı Menüsünü Aç"
+
+#: src/shortcuts-dialog.blp:61
 msgid "Show Shortcuts"
 msgstr "Kısayolları Göster"
 
-#: src/shortcuts-dialog.blp:61
+#: src/shortcuts-dialog.blp:66
 msgid "Close Window"
 msgstr "Pencereyi Kapat"
 
-#: src/shortcuts-dialog.blp:66
+#: src/shortcuts-dialog.blp:71
 msgid "Quit"
 msgstr "Çık"
 
@@ -690,23 +696,29 @@ msgstr "Sonraki"
 msgid "Video"
 msgstr "Video"
 
-#: src/window.blp:303
+#: src/window.blp:300
+#, fuzzy
+#| msgid "Chapter"
+msgid "Chapters"
+msgstr "Bölüme"
+
+#: src/window.blp:317
 msgid "Shuffle Playlist"
 msgstr "Oynatma Listesini Karıştır"
 
-#: src/window.blp:314
+#: src/window.blp:328
 msgid "Loop Playlist"
 msgstr "Oynatma Listesi Döngüsü"
 
-#: src/window.blp:382
+#: src/window.blp:396
 msgid "Toggle Elapsed/Remaining"
 msgstr "Geçen/Kalan Süre Değiştir"
 
-#: src/window.blp:428
+#: src/window.blp:442
 msgid "Drag and Drop Files Here"
 msgstr "Dosyaları Buraya Sürükleyip Bırak"
 
-#: src/window.blp:441
+#: src/window.blp:455
 msgid "Open…"
 msgstr "Aç…"
 

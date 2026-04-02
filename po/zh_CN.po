@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.diegopvlk.Cine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-01 10:52-0300\n"
+"POT-Creation-Date: 2026-04-02 10:52-0300\n"
 "PO-Revision-Date: 2026-03-17 11:09+0000\n"
 "Last-Translator: 心就在那里 <xjznlonly@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Weblate 5.17-dev\n"
 
 #: data/io.github.diegopvlk.Cine.desktop.in:2 src/main.py:210 src/mpris.py:146
-#: src/mpris.py:364 src/window.py:167 src/window.py:275 src/window.py:1710
+#: src/mpris.py:364 src/window.py:169 src/window.py:280 src/window.py:1743
 #: src/window.blp:6
 msgid "Cine"
 msgstr "Cine"
@@ -96,7 +96,7 @@ msgstr "未知标题"
 msgid "Original"
 msgstr "原始"
 
-#: src/playlist.py:73 src/window.py:1179 src/window.py:1555
+#: src/playlist.py:73 src/window.py:1207 src/window.py:1583
 msgid "File Error"
 msgstr "文件错误"
 
@@ -110,13 +110,13 @@ msgstr ""
 msgid "Remove from Playlist"
 msgstr "列表循环"
 
-#: src/playlist.py:299 src/window.py:634 src/playlist.blp:24 src/window.blp:99
+#: src/playlist.py:300 src/window.py:634 src/playlist.blp:24 src/window.blp:99
 msgid "Add Files"
 msgstr "添加文件"
 
 #: src/shortcuts.py:29 src/shortcuts.py:30 src/shortcuts.py:31
 #: src/shortcuts.py:32 src/shortcuts.py:82 src/shortcuts.py:83
-#: src/window.py:1639 src/window.blp:215
+#: src/window.py:1667 src/window.blp:215
 msgid "Volume"
 msgstr "音量"
 
@@ -178,8 +178,8 @@ msgstr "后退 5 秒"
 msgid "Seek 5s Forward"
 msgstr "前进 5 秒"
 
-#: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:1588
-#: src/window.blp:350
+#: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:1616
+#: src/window.blp:364
 msgid "Fullscreen"
 msgstr "全屏"
 
@@ -287,7 +287,7 @@ msgstr "显示统计面板"
 msgid "Loop"
 msgstr "循环播放"
 
-#: src/shortcuts.py:89 src/window.blp:325
+#: src/shortcuts.py:89 src/window.blp:339
 msgid "Loop File"
 msgstr "单个文件循环"
 
@@ -379,7 +379,7 @@ msgstr "回放"
 msgid "Miscellaneous"
 msgstr "杂项"
 
-#: src/window.py:511 src/window.py:1171 src/window.blp:114
+#: src/window.py:511 src/window.py:1199 src/window.blp:114
 msgid "Add Subtitle Track"
 msgstr "添加字幕轨道"
 
@@ -400,7 +400,7 @@ msgid "Add Folder"
 msgstr "添加文件夹"
 
 #: src/window.py:602 src/shortcuts-dialog.blp:21 src/window.blp:89
-#: src/window.blp:452
+#: src/window.blp:466
 msgid "Open Folder"
 msgstr "打开文件夹"
 
@@ -424,40 +424,40 @@ msgstr "字幕"
 msgid "Media"
 msgstr "媒体"
 
-#: src/window.py:723 src/playlist.blp:36 src/window.blp:109
+#: src/window.py:729 src/playlist.blp:36 src/window.blp:109
 msgid "Add URL"
 msgstr "添加 URL"
 
-#: src/window.py:723 src/shortcuts-dialog.blp:26 src/window.blp:94
-#: src/window.blp:462
+#: src/window.py:729 src/shortcuts-dialog.blp:26 src/window.blp:94
+#: src/window.blp:476
 msgid "Open URL"
 msgstr "打开 URL"
 
-#: src/window.py:736
+#: src/window.py:742
 msgid "URL"
 msgstr "URL"
 
-#: src/window.py:744
+#: src/window.py:750
 msgid "Add"
 msgstr "添加"
 
-#: src/window.py:744 src/window.blp:78
+#: src/window.py:750 src/window.blp:78
 msgid "Open"
 msgstr "打开"
 
-#: src/window.py:917
+#: src/window.py:923 src/window.py:1040
 msgid "Chapter"
 msgstr "章节"
 
-#: src/window.py:1070
+#: src/window.py:1098
 msgid "Pause"
 msgstr "暂停"
 
-#: src/window.py:1070 src/window.py:1175
+#: src/window.py:1098 src/window.py:1203
 msgid "Play"
 msgstr "播放"
 
-#: src/window.py:1588
+#: src/window.py:1616
 msgid "Exit Fullscreen"
 msgstr "退出全屏"
 
@@ -558,7 +558,7 @@ msgstr "重置音频延迟"
 msgid "Playback Speed"
 msgstr "播放速度"
 
-#: src/playlist.blp:5 src/window.blp:335
+#: src/playlist.blp:5 src/window.blp:349
 msgid "Playlist"
 msgstr "播放列表"
 
@@ -648,14 +648,20 @@ msgid "Open Audio Menu"
 msgstr "打开音频菜单"
 
 #: src/shortcuts-dialog.blp:56
+#, fuzzy
+#| msgid "Open Subtitles Menu"
+msgid "Open Chapters Menu"
+msgstr "打开字幕菜单"
+
+#: src/shortcuts-dialog.blp:61
 msgid "Show Shortcuts"
 msgstr "显示快捷键"
 
-#: src/shortcuts-dialog.blp:61
+#: src/shortcuts-dialog.blp:66
 msgid "Close Window"
 msgstr "关闭窗口"
 
-#: src/shortcuts-dialog.blp:66
+#: src/shortcuts-dialog.blp:71
 msgid "Quit"
 msgstr "退出"
 
@@ -683,22 +689,28 @@ msgstr "下一个"
 msgid "Video"
 msgstr "视频"
 
-#: src/window.blp:303
+#: src/window.blp:300
+#, fuzzy
+#| msgid "Chapter"
+msgid "Chapters"
+msgstr "章节"
+
+#: src/window.blp:317
 msgid "Shuffle Playlist"
 msgstr "随机播放列表"
 
-#: src/window.blp:314
+#: src/window.blp:328
 msgid "Loop Playlist"
 msgstr "列表循环"
 
-#: src/window.blp:382
+#: src/window.blp:396
 msgid "Toggle Elapsed/Remaining"
 msgstr "切换 已播放/剩余时间"
 
-#: src/window.blp:428
+#: src/window.blp:442
 msgid "Drag and Drop Files Here"
 msgstr "将文件拖放至此处"
 
-#: src/window.blp:441
+#: src/window.blp:455
 msgid "Open…"
 msgstr "打开…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.diegopvlk.Cine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-01 10:52-0300\n"
+"POT-Creation-Date: 2026-04-02 10:52-0300\n"
 "PO-Revision-Date: 2026-02-28 11:40-0300\n"
 "Last-Translator: Diego Povliuk <diego.pvlk@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/cine/cine/fr/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Weblate 5.16-dev\n"
 
 #: data/io.github.diegopvlk.Cine.desktop.in:2 src/main.py:210 src/mpris.py:146
-#: src/mpris.py:364 src/window.py:167 src/window.py:275 src/window.py:1710
+#: src/mpris.py:364 src/window.py:169 src/window.py:280 src/window.py:1743
 #: src/window.blp:6
 msgid "Cine"
 msgstr "Cine"
@@ -103,7 +103,7 @@ msgstr "Titre inconnu"
 msgid "Original"
 msgstr "Original"
 
-#: src/playlist.py:73 src/window.py:1179 src/window.py:1555
+#: src/playlist.py:73 src/window.py:1207 src/window.py:1583
 msgid "File Error"
 msgstr "Erreur de fichier"
 
@@ -117,13 +117,13 @@ msgstr ""
 msgid "Remove from Playlist"
 msgstr "Faire boucler la liste de lecture"
 
-#: src/playlist.py:299 src/window.py:634 src/playlist.blp:24 src/window.blp:99
+#: src/playlist.py:300 src/window.py:634 src/playlist.blp:24 src/window.blp:99
 msgid "Add Files"
 msgstr "Ajouter des fichiers"
 
 #: src/shortcuts.py:29 src/shortcuts.py:30 src/shortcuts.py:31
 #: src/shortcuts.py:32 src/shortcuts.py:82 src/shortcuts.py:83
-#: src/window.py:1639 src/window.blp:215
+#: src/window.py:1667 src/window.blp:215
 msgid "Volume"
 msgstr "Volume"
 
@@ -185,8 +185,8 @@ msgstr "Reculer de 5 secondes"
 msgid "Seek 5s Forward"
 msgstr "Avancer de 5 secondes"
 
-#: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:1588
-#: src/window.blp:350
+#: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:1616
+#: src/window.blp:364
 msgid "Fullscreen"
 msgstr "Plein écran"
 
@@ -294,7 +294,7 @@ msgstr "Interface des statistiques"
 msgid "Loop"
 msgstr "Boucle"
 
-#: src/shortcuts.py:89 src/window.blp:325
+#: src/shortcuts.py:89 src/window.blp:339
 msgid "Loop File"
 msgstr "Faire boucler le fichier"
 
@@ -386,7 +386,7 @@ msgstr "Lecture"
 msgid "Miscellaneous"
 msgstr "Divers"
 
-#: src/window.py:511 src/window.py:1171 src/window.blp:114
+#: src/window.py:511 src/window.py:1199 src/window.blp:114
 msgid "Add Subtitle Track"
 msgstr "Ajouter une piste de sous-titres"
 
@@ -407,7 +407,7 @@ msgid "Add Folder"
 msgstr "Ajouter un dossier"
 
 #: src/window.py:602 src/shortcuts-dialog.blp:21 src/window.blp:89
-#: src/window.blp:452
+#: src/window.blp:466
 msgid "Open Folder"
 msgstr "Ouvrir un dossier"
 
@@ -431,40 +431,40 @@ msgstr "Sous-titres"
 msgid "Media"
 msgstr "Media"
 
-#: src/window.py:723 src/playlist.blp:36 src/window.blp:109
+#: src/window.py:729 src/playlist.blp:36 src/window.blp:109
 msgid "Add URL"
 msgstr "Ajouter une URL"
 
-#: src/window.py:723 src/shortcuts-dialog.blp:26 src/window.blp:94
-#: src/window.blp:462
+#: src/window.py:729 src/shortcuts-dialog.blp:26 src/window.blp:94
+#: src/window.blp:476
 msgid "Open URL"
 msgstr "Ouvrir l'URL"
 
-#: src/window.py:736
+#: src/window.py:742
 msgid "URL"
 msgstr "URL"
 
-#: src/window.py:744
+#: src/window.py:750
 msgid "Add"
 msgstr "Ajouter"
 
-#: src/window.py:744 src/window.blp:78
+#: src/window.py:750 src/window.blp:78
 msgid "Open"
 msgstr "Ouvrir"
 
-#: src/window.py:917
+#: src/window.py:923 src/window.py:1040
 msgid "Chapter"
 msgstr "Chapitre"
 
-#: src/window.py:1070
+#: src/window.py:1098
 msgid "Pause"
 msgstr "Pause"
 
-#: src/window.py:1070 src/window.py:1175
+#: src/window.py:1098 src/window.py:1203
 msgid "Play"
 msgstr "Lecture"
 
-#: src/window.py:1588
+#: src/window.py:1616
 msgid "Exit Fullscreen"
 msgstr "Quitter le plein écran"
 
@@ -565,7 +565,7 @@ msgstr "Réinitialiser le délai de l'audio"
 msgid "Playback Speed"
 msgstr "Vitesse de lecture"
 
-#: src/playlist.blp:5 src/window.blp:335
+#: src/playlist.blp:5 src/window.blp:349
 msgid "Playlist"
 msgstr "Liste de lecture"
 
@@ -659,14 +659,20 @@ msgid "Open Audio Menu"
 msgstr "Ouvrir le menu Audio"
 
 #: src/shortcuts-dialog.blp:56
+#, fuzzy
+#| msgid "Open Subtitles Menu"
+msgid "Open Chapters Menu"
+msgstr "Ouvrir le menu -titres"
+
+#: src/shortcuts-dialog.blp:61
 msgid "Show Shortcuts"
 msgstr "Afficher les raccourcis"
 
-#: src/shortcuts-dialog.blp:61
+#: src/shortcuts-dialog.blp:66
 msgid "Close Window"
 msgstr "Fermer la fenêtre"
 
-#: src/shortcuts-dialog.blp:66
+#: src/shortcuts-dialog.blp:71
 msgid "Quit"
 msgstr "Quitter"
 
@@ -694,23 +700,29 @@ msgstr "Prochain"
 msgid "Video"
 msgstr "Vidéo"
 
-#: src/window.blp:303
+#: src/window.blp:300
+#, fuzzy
+#| msgid "Chapter"
+msgid "Chapters"
+msgstr "Chapitre"
+
+#: src/window.blp:317
 msgid "Shuffle Playlist"
 msgstr "Lecture aléatoire de la liste de lecture"
 
-#: src/window.blp:314
+#: src/window.blp:328
 msgid "Loop Playlist"
 msgstr "Faire boucler la liste de lecture"
 
-#: src/window.blp:382
+#: src/window.blp:396
 msgid "Toggle Elapsed/Remaining"
 msgstr "Basculer écoulé/restant"
 
-#: src/window.blp:428
+#: src/window.blp:442
 msgid "Drag and Drop Files Here"
 msgstr "Glissez-déposez les fichiers ici"
 
-#: src/window.blp:441
+#: src/window.blp:455
 msgid "Open…"
 msgstr "Ouvrir…"
 
