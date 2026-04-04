@@ -284,10 +284,10 @@ class Playlist(Adw.Dialog):
         new_row = self.playlist_list_box.get_row_at_index(current_pos)
 
         if isinstance(new_row, (Gtk.Box, Adw.ActionRow)):
-            if idx and (r := self.playlist_list_box.get_row_at_index(idx - 1)):
-                r.grab_focus()
-            else:
+            if idx is None:
                 new_row.grab_focus()
+            elif row := self.playlist_list_box.get_row_at_index(max(0, idx - 1)):
+                row.grab_focus()
 
             new_row.add_css_class("playing-item-playlist")
             new_row.add_suffix(self.playing_icon)
