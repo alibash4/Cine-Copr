@@ -1381,7 +1381,7 @@ class CineWindow(Adw.ApplicationWindow):
             if self.click_hold_id:
                 GLib.source_remove(self.click_hold_id)
 
-            self.click_hold_id = GLib.timeout_add(400, on_click_hold)
+            self.click_hold_id = GLib.timeout_add(500, on_click_hold)
 
         self._show_ui()
         self._hide_ui_timeout()
