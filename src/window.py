@@ -313,7 +313,7 @@ class CineWindow(Adw.ApplicationWindow):
 
         self.fullscreen_button.connect(
             "clicked",
-            lambda _btn: setattr(self.mpv, "fullscreen", not self.is_fullscreen),
+            lambda _btn: setattr(self.mpv, "fullscreen", not self.is_fs),
         )
 
         self.volume_handler_id = self.volume_scale.connect(
@@ -432,8 +432,8 @@ class CineWindow(Adw.ApplicationWindow):
         surface: Gdk.Surface | None = self.get_surface()
 
         if isinstance(surface, Gdk.Toplevel):
-            # When dragging the window while in fullscreen
-            # fullscreened signal is not triggered, so use this:
+            # When dragging the window while in fullscreen,
+            # sometimes fullscreened signal is not triggered, so use this:
             surface.connect("notify::state", self._set_fs_state)
 
     def _set_fs_state(self, top_level, _pspec):
@@ -442,7 +442,8 @@ class CineWindow(Adw.ApplicationWindow):
         settings: Gtk.Settings | None = Gtk.Settings.get_default()
 
         try:
-            self.mpv.fullscreen = is_fullscreen
+            if not is_fullscreen:
+                self.mpv.fullscreen = is_fullscreen
         except:
             pass
 
@@ -491,11 +492,7 @@ class CineWindow(Adw.ApplicationWindow):
                     self.revealer_ui.set_reveal_child(False)
                     self.chapter_popover.popdown()
 
-                if (
-                    self.is_fullscreen
-                    and not active_or_hover
-                    and not self.props.dialogs
-                ):
+                if self.is_fs and not active_or_hover and not self.props.dialogs:
                     self.set_cursor_from_name("none")
         except mpv.ShutdownError:
             return
@@ -1279,7 +1276,7 @@ class CineWindow(Adw.ApplicationWindow):
         )
 
     def _sync_fullscreen(self, mpv_is_fs):
-        self.is_fullscreen = mpv_is_fs
+        self.is_fs = mpv_is_fs
         if mpv_is_fs:
             self.fullscreen()
         else:
