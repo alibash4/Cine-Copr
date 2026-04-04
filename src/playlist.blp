@@ -37,6 +37,13 @@ template $Playlist: Adw.Dialog {
 					}
 
 					[start]
+					Button {
+						icon-name: "document-save-symbolic";
+						clicked => $_on_save_playlist();
+						tooltip-text: _("Save Playlist");
+					}
+
+					[start]
 					Adw.Spinner spinner {
 						visible: false;
 					}

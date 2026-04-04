@@ -302,3 +302,43 @@ class Playlist(Adw.Dialog):
     @Gtk.Template.Callback()
     def _on_add_playlist_files(self, _button):
         self.win._open_add_dialog(_("Add Files"), "playlist-add", from_playlist=True)
+
+    @Gtk.Template.Callback()
+    def _on_save_playlist(self, _button):
+        dialog = Gtk.FileDialog.new()
+        dialog.set_title(_("Save Playlist"))
+        dialog.set_initial_name(_("Playlist") + ".m3u8")
+
+        m3u8_filter = Gtk.FileFilter()
+        m3u8_filter.add_suffix("m3u8")
+        filters = Gio.ListStore.new(Gtk.FileFilter)
+        filters.append(m3u8_filter)
+        dialog.set_filters(filters)
+
+        def on_save(_dialog, result):
+            try:
+                file = dialog.save_finish(result)
+                path = file.get_path()
+                self._write_m3u_file(self.mpv, path)
+            except Exception as e:
+                print(f"Save playlist error: {e}")
+
+        dialog.save(self.win, None, on_save)
+
+    def _write_m3u_file(self, mpv, path):
+        with open(path, "w", encoding="utf-8") as f:
+            f.write("#EXTM3U\n")
+
+            for item in mpv.playlist:
+                path = item["filename"]
+                name_with_ext = os.path.basename(path)
+                file_title = os.path.splitext(name_with_ext)[0]
+                title = file_title
+
+                if not is_local_path(path):
+                    title = item.get("title") or file_title
+
+                duration = -1
+
+                f.write(f"#EXTINF:{duration},{title}\n")
+                f.write(f"{path}\n")
