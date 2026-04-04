@@ -37,5 +37,8 @@
 		<key name="thumbnail-preview" type="b">
 			<default>false</default>
 		</key>
+		<key name="save-session" type="b">
+			<default>false</default>
+		</key>
 	</schema>
 </schemalist>

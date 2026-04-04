@@ -25,6 +25,7 @@ from typing import cast
 from gettext import gettext as _
 from urllib.parse import urlparse
 from time import time
+from .save_session import restore_last_playlist
 
 from .utils import (
     is_local_path,
@@ -122,7 +123,7 @@ class CineWindow(Adw.ApplicationWindow):
     video_progress_adjustment: Gtk.Adjustment = Gtk.Template.Child()
     time_total_label: Gtk.Label = Gtk.Template.Child()
 
-    def __init__(self, **kwargs):
+    def __init__(self, is_activate=False, **kwargs):
         super().__init__(**kwargs)
         self.app: Gtk.Application = cast(Gtk.Application, kwargs.get("application"))
 
@@ -225,6 +226,9 @@ class CineWindow(Adw.ApplicationWindow):
             self.mpv.command("load-input-conf", INPUT_CONF)
 
         sync_mpv_with_settings(self)
+
+        if settings.get_boolean("save-session") and is_activate:
+            restore_last_playlist(self, self.app, self.mpv)
 
     def _setup_actions(self):
         self._create_action("clear-and-add", self._on_clear_and_add)
@@ -1552,6 +1556,7 @@ class CineWindow(Adw.ApplicationWindow):
             def set():
                 self.spinner.set_visible(False)
                 self.local_path = is_local_path(self.mpv.path)
+                self.start_page.set_sensitive(True)
 
                 if settings.get_boolean("thumbnail-preview"):
                     self.thumb_preview.props.visible = True

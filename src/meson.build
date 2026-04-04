@@ -46,6 +46,7 @@ cine_sources = [
   'options.py',
   'playlist.py',
   'preferences.py',
+  'save_session.py',
   'shortcuts.py',
   'utils.py',
   'window.py',

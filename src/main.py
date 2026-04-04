@@ -32,6 +32,7 @@ from gi.repository import Adw, Gio, GLib, Gtk
 from .window import CineWindow
 from .preferences import Preferences, settings
 from .mpris import MPRIS
+from .save_session import save_last_playlist_file
 
 # Set the icon shown in gnome sound settings
 os.environ["PIPEWIRE_PROPS"] = '{application.icon-name="io.github.diegopvlk.Cine"}'
@@ -72,7 +73,7 @@ class CineApplication(Adw.Application):
         )
 
     def do_activate(self):
-        win = CineWindow(application=self)
+        win = CineWindow(application=self, is_activate=True)
         win.present()
 
     def do_open(self, files, n_files, hint):
@@ -259,6 +260,8 @@ class CineApplication(Adw.Application):
             self.set_accels_for_action(f"app.{name}", shortcuts)
 
     def _on_window_removed(self, _obj, win):
+        if settings.get_boolean("save-session"):
+            save_last_playlist_file(win.mpv)
         win.mpv.quit()
 
 
