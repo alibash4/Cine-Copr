@@ -361,7 +361,8 @@ class CineWindow(Adw.ApplicationWindow):
 
     def _setup_event_handlers(self):
         key_controller = Gtk.EventControllerKey()
-        key_controller.connect("key-pressed", self._on_key_pressed)
+        key_controller.connect("key-pressed", self._on_key_event, "keydown")
+        key_controller.connect("key-released", self._on_key_event, "keyup")
         key_controller.set_propagation_phase(Gtk.PropagationPhase.CAPTURE)
         self.add_controller(key_controller)
 
@@ -1282,16 +1283,18 @@ class CineWindow(Adw.ApplicationWindow):
         else:
             self.unfullscreen()
 
-    def _on_key_pressed(self, _controller, keyval, _keycode, state):
+    def _on_key_event(self, _controller, keyval, _keycode, state, event_type):
         key_name = Gdk.keyval_name(keyval)
 
-        if key_name == "Escape":
-            self.mpv.fullscreen = False
-            return
-
-        if key_name in ("Tab", "ISO_Left_Tab", "Return"):
-            self.revealer_ui.set_reveal_child(True)
-            self._hide_ui_timeout(s=3)
+        if event_type == "keydown":
+            if key_name == "Escape":
+                self.mpv.fullscreen = False
+                return
+            if key_name in ("Tab", "ISO_Left_Tab", "Return"):
+                self.revealer_ui.set_reveal_child(True)
+                self._hide_ui_timeout(s=3)
+                return
+        elif key_name in ("Escape", "Tab", "ISO_Left_Tab", "Return"):
             return
 
         clean_state = state & Gtk.accelerator_get_default_mod_mask()
@@ -1315,7 +1318,7 @@ class CineWindow(Adw.ApplicationWindow):
         full_combo = "+".join(mods + [mpv_key])
 
         try:
-            self.mpv.command("keypress", full_combo)
+            self.mpv.command(event_type, full_combo)
             return True
         except Exception:
             return
