@@ -8,713 +8,724 @@ msgstr ""
 "Project-Id-Version: io.github.diegopvlk.Cine\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-04 17:12-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-04-06 11:07+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/cine/app/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: data/io.github.diegopvlk.Cine.desktop.in:2 src/main.py:209 src/mpris.py:146
 #: src/mpris.py:364 src/window.py:170 src/window.py:284 src/window.py:1751
 #: src/window.blp:6
 msgid "Cine"
-msgstr ""
+msgstr "Cine"
 
 #: data/io.github.diegopvlk.Cine.desktop.in:3
 #: data/io.github.diegopvlk.Cine.metainfo.xml.in:23
 msgid "Play your videos"
-msgstr ""
+msgstr "Toista videoita"
 
 #. TRANSLATORS: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/io.github.diegopvlk.Cine.desktop.in:10
 msgid "Audio;Video;Movie;TV;Film;Clip;Player;Cine;mpv;"
 msgstr ""
+"Audio;Video;Movie;TV;Film;Clip;Player;Cine;mpv;ääni;elokuva;leffa;filmi;leike;soitin;toistin;"
 
 #: data/io.github.diegopvlk.Cine.desktop.in:18 src/shortcuts-dialog.blp:11
 #: src/window.blp:135
 msgid "New Window"
-msgstr ""
+msgstr "Uusi ikkuna"
 
 #: data/io.github.diegopvlk.Cine.metainfo.xml.in:25
 msgid ""
 "Cine combines a clean interface with a high-performance engine to deliver a "
 "seamless viewing experience."
 msgstr ""
+"Cine yhdistää selkeän käyttöliittymän tehokkaaseen taustaosaan "
+"toteuttaakseen saumattoman katselukokemuksen."
 
 #: data/io.github.diegopvlk.Cine.metainfo.xml.in:27
 msgid "Simple Design: A refined, distraction-free interface"
-msgstr ""
+msgstr "Yksinkertainen suunnitelu: Häiriövapaa käyttöliittymä"
 
 #: data/io.github.diegopvlk.Cine.metainfo.xml.in:28
 msgid ""
 "MPV-Based: Leverages the robust power of MPV for great playback and format "
 "support"
 msgstr ""
+"MPV-pohjainen: Hyödyntää MPV:n tehokkuutta taatakseen erinomaisen toiston ja "
+"tuen eri tiedostomuodoille"
 
 #: data/io.github.diegopvlk.Cine.metainfo.xml.in:29
 msgid ""
 "Audio and Subtitles: Control track selection and synchronization for both"
 msgstr ""
+"Ääni ja tekstitykset: Hallinnoi äänen sekä tekstityksen raitavalintaa ja "
+"synkronointia"
 
 #: data/io.github.diegopvlk.Cine.metainfo.xml.in:30
 msgid ""
 "Video Controls: Easily adjust brightness, contrast, zoom, aspect ratio, etc."
 msgstr ""
+"Videosäätimet: Säädä vaivatta kirkkautta, kontrastia, lähennys, kuvasuhdetta "
+"jne."
 
 #: data/io.github.diegopvlk.Cine.metainfo.xml.in:42
 msgid "Video Playing"
-msgstr ""
+msgstr "Videon toisto"
 
 #: data/io.github.diegopvlk.Cine.metainfo.xml.in:46 src/preferences.blp:5
 #: src/window.blp:140
 msgid "Preferences"
-msgstr ""
+msgstr "Asetukset"
 
 #: data/io.github.diegopvlk.Cine.metainfo.xml.in:50
 msgid "Video Options"
-msgstr ""
+msgstr "Videon asetukset"
 
 #: data/io.github.diegopvlk.Cine.metainfo.xml.in:54
 msgid "Main Window"
-msgstr ""
+msgstr "Pääikkuna"
 
 #. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
 #: src/main.py:219
 msgid "translator-credits"
-msgstr ""
+msgstr "Jiri Grönroos"
 
 #: src/mpris.py:153 src/mpris.py:221 src/mpris.py:356
 msgid "Unknown title"
-msgstr ""
+msgstr "Tuntematon otsikko"
 
 #: src/options.py:193 src/options.blp:79 src/options.blp:137
 msgid "Original"
-msgstr ""
+msgstr "Alkuperäinen"
 
 #: src/playlist.py:73 src/window.py:1212 src/window.py:1591
 msgid "File Error"
-msgstr ""
+msgstr "Tiedostovirhe"
 
 #: src/playlist.py:239
 msgid "Open Item Location"
-msgstr ""
+msgstr "Avaa kohteen sijainti"
 
 #: src/playlist.py:240
 msgid "Remove from Playlist"
-msgstr ""
+msgstr "Poista soittolistalta"
 
 #: src/playlist.py:304 src/window.py:636 src/playlist.blp:24 src/window.blp:99
 msgid "Add Files"
-msgstr ""
+msgstr "Lisää tiedostoja"
 
 #: src/playlist.py:309 src/playlist.blp:43
 msgid "Save Playlist"
-msgstr ""
+msgstr "Tallenna soittolista"
 
 #: src/playlist.py:310 src/playlist.blp:5 src/window.blp:349
 msgid "Playlist"
-msgstr ""
+msgstr "Soittolista"
 
 #: src/shortcuts.py:29 src/shortcuts.py:30 src/shortcuts.py:31
 #: src/shortcuts.py:32 src/shortcuts.py:82 src/shortcuts.py:83
 #: src/window.py:1675 src/window.blp:215
 msgid "Volume"
-msgstr ""
+msgstr "Äänenvoimakkuus"
 
 #: src/shortcuts.py:29
 msgid "Volume Increase"
-msgstr ""
+msgstr "Lisää äänenvoimakkuutta"
 
 #: src/shortcuts.py:30
 msgid "Volume Decrease"
-msgstr ""
+msgstr "Vähennä äänenvoimakkuutta"
 
 #: src/shortcuts.py:33 src/shortcuts.py:34 src/shortcuts.py:35
 #: src/window.blp:198
 msgid "Play/Pause"
-msgstr ""
+msgstr "Toista/keskeytä"
 
 #: src/shortcuts.py:36
 msgid "Show/Hide Subtitles"
-msgstr ""
+msgstr "Näytä/piilota tekstitys"
 
 #: src/shortcuts.py:37 src/shortcuts.py:38 src/shortcuts.py:205
 #: src/window.blp:257
 msgid "Subtitles"
-msgstr ""
+msgstr "Tekstitys"
 
 #: src/shortcuts.py:37
 msgid "Switch to Next Subtitle Track"
-msgstr ""
+msgstr "Vaihda seuraavaan tekstitysraitaan"
 
 #: src/shortcuts.py:38
 msgid "Switch to Previous Subtitle Track"
-msgstr ""
+msgstr "Vaihda edelliseen tekstitysraitaan"
 
 #: src/shortcuts.py:39 src/shortcuts.py:40 src/window.py:663 src/window.blp:272
 msgid "Audio"
-msgstr ""
+msgstr "Ääni"
 
 #: src/shortcuts.py:39
 msgid "Switch to Next Audio Track"
-msgstr ""
+msgstr "Vaihda seuraavaan ääniraitaan"
 
 #: src/shortcuts.py:40
 msgid "Switch to Previous Audio Track"
-msgstr ""
+msgstr "Vaihda edelliseen ääniraitaan"
 
 #: src/shortcuts.py:41
 msgid "Seek 10s Backward"
-msgstr ""
+msgstr "Kelaa 10 s taaksepäin"
 
 #: src/shortcuts.py:42
 msgid "Seek 10s Forward"
-msgstr ""
+msgstr "Kelaa 10 s eteenpäin"
 
 #: src/shortcuts.py:43
 msgid "Seek 5s Backward"
-msgstr ""
+msgstr "Kelaa 5 s taaksepäin"
 
 #: src/shortcuts.py:44
 msgid "Seek 5s Forward"
-msgstr ""
+msgstr "Kelaa 5 s eteenpäin"
 
 #: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:1624
 #: src/window.blp:364
 msgid "Fullscreen"
-msgstr ""
+msgstr "Koko näyttö"
 
 #: src/shortcuts.py:54 src/shortcuts.py:55 src/shortcuts.py:56
 #: src/shortcuts.py:57 src/shortcuts.py:58 src/options.blp:285
 #: src/options.blp:309
 msgid "Zoom"
-msgstr ""
+msgstr "Lähennys"
 
 #: src/shortcuts.py:54 src/shortcuts.py:55 src/shortcuts.py:56
 msgid "Zoom In"
-msgstr ""
+msgstr "Lähennä"
 
 #: src/shortcuts.py:57 src/shortcuts.py:58
 msgid "Zoom Out"
-msgstr ""
+msgstr "Loitonna"
 
 #: src/shortcuts.py:59 src/shortcuts.py:60 src/options.blp:611
 #: src/options.blp:635
 msgid "Subtitle Delay"
-msgstr ""
+msgstr "Tekstityksen viive"
 
 #: src/shortcuts.py:59
 msgid "Decrease Subtitle Delay"
-msgstr ""
+msgstr "Vähennä tekstityksen viivettä"
 
 #: src/shortcuts.py:60
 msgid "Increase Subtitle Delay"
-msgstr ""
+msgstr "Lisää tekstityksen viivettä"
 
 #: src/shortcuts.py:61 src/shortcuts.py:62
 msgid "Subtitle Position"
-msgstr ""
+msgstr "Tekstityksen sijainti"
 
 #: src/shortcuts.py:61
 msgid "Move Subtitles Up"
-msgstr ""
+msgstr "Siirrä tekstitys ylös"
 
 #: src/shortcuts.py:62
 msgid "Move Subtitles Down"
-msgstr ""
+msgstr "Siirrä tekstitys alas"
 
 #: src/shortcuts.py:63 src/shortcuts.py:64 src/preferences.blp:89
 msgid "Subtitle Scale"
-msgstr ""
+msgstr "Tekstityksen skaalaus"
 
 #: src/shortcuts.py:63
 msgid "Increase Subtitle Scale"
-msgstr ""
+msgstr "Lisää tekstityksen skaalausta"
 
 #: src/shortcuts.py:64
 msgid "Decrease Subtitle Scale"
-msgstr ""
+msgstr "Vähennä tekstityksen skaalausta"
 
 #: src/shortcuts.py:65 src/window.blp:226
 msgid "Mute/Unmute"
-msgstr ""
+msgstr "Mykistä/palauta ääni"
 
 #: src/shortcuts.py:66 src/shortcuts.py:67 src/shortcuts.py:68
 #: src/options.blp:666 src/options.blp:690
 msgid "Audio Delay"
-msgstr ""
+msgstr "Äänen viive"
 
 #: src/shortcuts.py:66
 msgid "Decrease Audio Delay"
-msgstr ""
+msgstr "Vähennä äänen viivettä"
 
 #: src/shortcuts.py:67 src/shortcuts.py:68
 msgid "Increase Audio Delay"
-msgstr ""
+msgstr "Lisää äänen viivettä"
 
 #: src/shortcuts.py:78
 msgid "Go Back One Frame"
-msgstr ""
+msgstr "Siirry yksi kehys taaksepäin"
 
 #: src/shortcuts.py:79
 msgid "Advance One Frame"
-msgstr ""
+msgstr "Siirry yksi kehys eteenpäin"
 
 #: src/shortcuts.py:80
 msgid "Seek to the Previous Chapter"
-msgstr ""
+msgstr "Siirry edelliseen kappaleeseen"
 
 #: src/shortcuts.py:81
 msgid "Seek to the Next Chapter"
-msgstr ""
+msgstr "Siirry seuraavaan kappaleeseen"
 
 #: src/shortcuts.py:85
 msgid "Take Screenshot With Subtitles"
-msgstr ""
+msgstr "Ota kuvakaappaus tekstityksen kanssa"
 
 #: src/shortcuts.py:86
 msgid "Take Screenshot Without Subtitles"
-msgstr ""
+msgstr "Ota kuvakaappaus ilman tekstitystä"
 
 #: src/shortcuts.py:87
 msgid "Statistics"
-msgstr ""
+msgstr "Tilastot"
 
 #: src/shortcuts.py:88
 msgid "Statistics Overlay"
-msgstr ""
+msgstr "Tilastonäkymä"
 
 #: src/shortcuts.py:89
 msgid "Loop"
-msgstr ""
+msgstr "Kertaus"
 
 #: src/shortcuts.py:89 src/window.blp:339
 msgid "Loop File"
-msgstr ""
+msgstr "Kertaa tiedosto"
 
 #: src/shortcuts.py:90 src/shortcuts.py:91 src/options.blp:340
 #: src/options.blp:363
 msgid "Contrast"
-msgstr ""
+msgstr "Kontrasti"
 
 #: src/shortcuts.py:90
 msgid "Decrease Contrast"
-msgstr ""
+msgstr "Vähennä kontrastia"
 
 #: src/shortcuts.py:91
 msgid "Increase Contrast"
-msgstr ""
+msgstr "Lisää kontrastia"
 
 #: src/shortcuts.py:92 src/shortcuts.py:93 src/options.blp:394
 #: src/options.blp:417
 msgid "Brightness"
-msgstr ""
+msgstr "Kirkkaus"
 
 #: src/shortcuts.py:92
 msgid "Decrease Brightness"
-msgstr ""
+msgstr "Vähennä kirkkautta"
 
 #: src/shortcuts.py:93
 msgid "Increase Brightness"
-msgstr ""
+msgstr "Lisää kirkkautta"
 
 #: src/shortcuts.py:94 src/shortcuts.py:95 src/options.blp:448
 #: src/options.blp:471
 msgid "Gamma"
-msgstr ""
+msgstr "Gamma"
 
 #: src/shortcuts.py:94
 msgid "Decrease Gamma"
-msgstr ""
+msgstr "Vähennä gammaa"
 
 #: src/shortcuts.py:95
 msgid "Increase Gamma"
-msgstr ""
+msgstr "Lisää gammaa"
 
 #: src/shortcuts.py:96 src/shortcuts.py:97 src/options.blp:502
 #: src/options.blp:525
 msgid "Saturation"
-msgstr ""
+msgstr "Kylläisyys"
 
 #: src/shortcuts.py:96
 msgid "Decrease Saturation"
-msgstr ""
+msgstr "Vähennä kylläisyyttä"
 
 #: src/shortcuts.py:97
 msgid "Increase Saturation"
-msgstr ""
+msgstr "Lisää kylläisyyttä"
 
 #: src/shortcuts.py:98 src/shortcuts.py:99 src/shortcuts.py:100
 msgid "Speed"
-msgstr ""
+msgstr "Nopeus"
 
 #: src/shortcuts.py:98
 msgid "Decrease Playback Speed"
-msgstr ""
+msgstr "Vähennä toistonopeutta"
 
 #: src/shortcuts.py:99
 msgid "Increase Playback Speed"
-msgstr ""
+msgstr "Lisää toistonopeutta"
 
 #: src/shortcuts.py:100 src/options.blp:711
 msgid "Reset Playback Speed"
-msgstr ""
+msgstr "Palauta toiston oletusnopeus"
 
 #: src/shortcuts.py:189
 msgid "Display & Video"
-msgstr ""
+msgstr "Näkymä ja video"
 
 #: src/shortcuts.py:206
 msgid "Audio & Volume"
-msgstr ""
+msgstr "Ääni ja äänenvoimakkuus"
 
 #: src/shortcuts.py:207
 msgid "Navigation"
-msgstr ""
+msgstr "Liikkuminen"
 
 #: src/shortcuts.py:208
 msgid "Playback"
-msgstr ""
+msgstr "Toisto"
 
 #: src/shortcuts.py:212 src/shortcuts.py:218
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Sekalaiset"
 
 #: src/window.py:513 src/window.py:1204 src/window.blp:114
 msgid "Add Subtitle Track"
-msgstr ""
+msgstr "Lisää tekstitysraita"
 
 #: src/window.py:515 src/window.py:524
 msgid "None"
-msgstr ""
+msgstr "Ei mitään"
 
 #: src/window.py:522 src/window.blp:119
 msgid "Add Audio Track"
-msgstr ""
+msgstr "Lisää ääniraita"
 
 #: src/window.py:561
 msgid "Track"
-msgstr ""
+msgstr "Raita"
 
 #: src/window.py:604 src/playlist.blp:30 src/window.blp:104
 msgid "Add Folder"
-msgstr ""
+msgstr "Lisää kansio"
 
 #: src/window.py:604 src/shortcuts-dialog.blp:21 src/window.blp:89
 #: src/window.blp:466
 msgid "Open Folder"
-msgstr ""
+msgstr "Avaa kansio"
 
 #: src/window.py:633 src/shortcuts-dialog.blp:16 src/window.blp:84
 msgid "Open Files"
-msgstr ""
+msgstr "Avaa tiedostoja"
 
 #: src/window.py:639
 msgid "Add Subtitle"
-msgstr ""
+msgstr "Lisää tekstitys"
 
 #: src/window.py:642
 msgid "Add Audio"
-msgstr ""
+msgstr "Lisää ääni"
 
 #: src/window.py:658
 msgid "Subtitle"
-msgstr ""
+msgstr "Tekstitys"
 
 #: src/window.py:667
 msgid "Media"
-msgstr ""
+msgstr "Media"
 
 #: src/window.py:734 src/playlist.blp:36 src/window.blp:109
 msgid "Add URL"
-msgstr ""
+msgstr "Lisää verkko-osoite"
 
 #: src/window.py:734 src/shortcuts-dialog.blp:26 src/window.blp:94
 #: src/window.blp:476
 msgid "Open URL"
-msgstr ""
+msgstr "Avaa verkko-osoite"
 
 #: src/window.py:747
 msgid "URL"
-msgstr ""
+msgstr "Verkko-osoite"
 
 #: src/window.py:755
 msgid "Add"
-msgstr ""
+msgstr "Lisää"
 
 #: src/window.py:755 src/window.blp:78
 msgid "Open"
-msgstr ""
+msgstr "Avaa"
 
 #: src/window.py:928 src/window.py:1045
 msgid "Chapter"
-msgstr ""
+msgstr "Kappale"
 
 #: src/window.py:1103
 msgid "Pause"
-msgstr ""
+msgstr "Keskeytä"
 
 #: src/window.py:1103 src/window.py:1208
 msgid "Play"
-msgstr ""
+msgstr "Toista"
 
 #: src/window.py:1624
 msgid "Exit Fullscreen"
-msgstr ""
+msgstr "Poistu koko näytöstä"
 
 #: src/options.blp:14
 msgid "Options"
-msgstr ""
+msgstr "Valinnat"
 
 #: src/options.blp:32
 msgid "Reset All"
-msgstr ""
+msgstr "Palauta oletusarvot"
 
 #: src/options.blp:44
 msgid "Reset Aspect Ratio"
-msgstr ""
+msgstr "Palauta kuvasuhde"
 
 #: src/options.blp:54
 msgid "Aspect Ratio"
-msgstr ""
+msgstr "Kuvasuhde"
 
 #: src/options.blp:102
 msgid "Reset Crop"
-msgstr ""
+msgstr "Palauta rajaus"
 
 #: src/options.blp:112
 msgid "Crop"
-msgstr ""
+msgstr "Rajaa"
 
 #: src/options.blp:161
 msgid "Reset Rotation"
-msgstr ""
+msgstr "Palauta kierto"
 
 #: src/options.blp:171
 msgid "Rotate"
-msgstr ""
+msgstr "Kierrä"
 
 #: src/options.blp:197
 msgid "Rotate Left"
-msgstr ""
+msgstr "Kierrä vasemmalle"
 
 #: src/options.blp:205
 msgid "Rotate Right"
-msgstr ""
+msgstr "Kierrä oikealle"
 
 #: src/options.blp:218
 msgid "Reset Flip"
-msgstr ""
+msgstr "Palauta peilaus"
 
 #: src/options.blp:228
 msgid "Flip"
-msgstr ""
+msgstr "Peilaa"
 
 #: src/options.blp:254
 msgid "Flip Horizontally"
-msgstr ""
+msgstr "Peilaa vaakasuunnassa"
 
 #: src/options.blp:262
 msgid "Flip Vertically"
-msgstr ""
+msgstr "Peilaa pystysuunnassa"
 
 #: src/options.blp:275
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Palauta lähennys"
 
 #: src/options.blp:330
 msgid "Reset Contrast"
-msgstr ""
+msgstr "Palauta kontrasti"
 
 #: src/options.blp:384
 msgid "Reset Brightness"
-msgstr ""
+msgstr "Palauta kirkkaus"
 
 #: src/options.blp:438
 msgid "Reset Gamma"
-msgstr ""
+msgstr "Palauta gamma"
 
 #: src/options.blp:492
 msgid "Reset Saturation"
-msgstr ""
+msgstr "Palauta kylläisyys"
 
 #: src/options.blp:546
 msgid "Reset Hue"
-msgstr ""
+msgstr "Palauta sävy"
 
 #. TRANSLATORS: Do not use "Color" or "Temperature", those are different things
 #: src/options.blp:557 src/options.blp:580
 msgid "Hue"
-msgstr ""
+msgstr "Sävy"
 
 #: src/options.blp:601
 msgid "Reset Subtitle Delay"
-msgstr ""
+msgstr "Palauta tekstitysviive"
 
 #: src/options.blp:656
 msgid "Reset Audio Delay"
-msgstr ""
+msgstr "Palauta ääniviive"
 
 #: src/options.blp:721 src/options.blp:745
 msgid "Playback Speed"
-msgstr ""
+msgstr "Toistonopeus"
 
 #: src/playlist.blp:98
 msgid "Add to Playlist"
-msgstr ""
+msgstr "Lisää soittolistalle"
 
 #: src/preferences.blp:16
 msgid "Open New Window for New Files"
-msgstr ""
+msgstr "Avaa uusi ikkuna uusille tiedostoille"
 
 #: src/preferences.blp:20
 msgid "Subtitle Color"
-msgstr ""
+msgstr "Tekstityksen väri"
 
 #: src/preferences.blp:33 src/preferences.blp:79
 msgid "Reset"
-msgstr ""
+msgstr "Palauta"
 
 #: src/preferences.blp:43
 msgid "Subtitle Font"
-msgstr ""
+msgstr "Tekstityksen fontti"
 
 #: src/preferences.blp:56
 msgid "Some fonts may not work"
-msgstr ""
+msgstr "Jotkin fontit eivät välttämättä toimi"
 
 #: src/preferences.blp:100
 msgid "Preferred Subtitle Languages"
-msgstr ""
+msgstr "Ensisijaiset tekstityskielet"
 
 #: src/preferences.blp:101 src/preferences.blp:106
 msgid "Example: en,es,pt"
-msgstr ""
+msgstr "Esimerkki: fi,en,es,pt"
 
 #: src/preferences.blp:105
 msgid "Preferred Audio Languages"
-msgstr ""
+msgstr "Ensisijaiset äänikielet"
 
 #: src/preferences.blp:110
 msgid "Progress Bar Thumbnail"
-msgstr ""
+msgstr "Edistymispalkin pienoiskuva"
 
 #: src/preferences.blp:114
 msgid "Hardware Decoding"
-msgstr ""
+msgstr "Laitteistopohjainen purku"
 
 #: src/preferences.blp:118
 msgid "Normalize Volume"
-msgstr ""
+msgstr "Normalisoi äänenvoimakkuus"
 
 #: src/preferences.blp:122
 msgid "Save Session on Close"
-msgstr ""
+msgstr "Tallenna istunto suljettaessa"
 
 #: src/preferences.blp:123
 msgid "Restore files and auto-play on startup"
-msgstr ""
+msgstr "Palauta tiedostot ja automaattinen toisto käynnistyksen yhteydessä"
 
 #: src/preferences.blp:127
 msgid "Save Video Position on Close"
-msgstr ""
+msgstr "Tallenna videon tila suljettaessa"
 
 #: src/preferences.blp:128
 msgid "Also save options like brightness, subtitle delay, etc."
-msgstr ""
+msgstr "Tallenna myös asetukset kuten kirkkaus, tekstityksen viive jne."
 
 #: src/preferences.blp:143
 msgid ""
 "Requires flatpak permission to read the folder where the video is stored"
 msgstr ""
+"Vaatii Flatpak-käyttöoikeuden lukeakseen kansiota, johon video on tallennettu"
 
 #: src/shortcuts-dialog.blp:8
 msgid "Shortcuts"
-msgstr ""
+msgstr "Pikanäppäimet"
 
 #: src/shortcuts-dialog.blp:31
 msgid "Add Files to Playlist"
-msgstr ""
+msgstr "Lisää tiedostoja soittolistalle"
 
 #: src/shortcuts-dialog.blp:36
 msgid "Add Folder to Playlist"
-msgstr ""
+msgstr "Lisää kansio soittolistalle"
 
 #: src/shortcuts-dialog.blp:41
 msgid "Add URL to Playlist"
-msgstr ""
+msgstr "Lisää verkko-osoite soittolistalle"
 
 #: src/shortcuts-dialog.blp:46
 msgid "Open Subtitles Menu"
-msgstr ""
+msgstr "Avaa tekstitysvalikko"
 
 #: src/shortcuts-dialog.blp:51
 msgid "Open Audio Menu"
-msgstr ""
+msgstr "Avaa äänivalikko"
 
 #: src/shortcuts-dialog.blp:56
 msgid "Open Chapters Menu"
-msgstr ""
+msgstr "Avaa kappalevalikko"
 
 #: src/shortcuts-dialog.blp:61
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Näytä pikanäppäimet"
 
 #: src/shortcuts-dialog.blp:66
 msgid "Close Window"
-msgstr ""
+msgstr "Sulje ikkuna"
 
 #: src/shortcuts-dialog.blp:71
 msgid "Quit"
-msgstr ""
+msgstr "Lopeta"
 
 #: src/window.blp:130
 msgid "Main Menu"
-msgstr ""
+msgstr "Päävalikko"
 
 #: src/window.blp:145
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Pikanäppäimet"
 
 #: src/window.blp:150
 msgid "About Cine"
-msgstr ""
+msgstr "Tietoja - Cine"
 
 #: src/window.blp:188
 msgid "Previous"
-msgstr ""
+msgstr "Edellinen"
 
 #: src/window.blp:208
 msgid "Next"
-msgstr ""
+msgstr "Seuraava"
 
 #: src/window.blp:286
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: src/window.blp:300
 msgid "Chapters"
-msgstr ""
+msgstr "Kappaleet"
 
 #: src/window.blp:317
 msgid "Shuffle Playlist"
-msgstr ""
+msgstr "Sekoita soittolista"
 
 #: src/window.blp:328
 msgid "Loop Playlist"
-msgstr ""
+msgstr "Kertaa soittolista"
 
 #: src/window.blp:396
 msgid "Toggle Elapsed/Remaining"
-msgstr ""
+msgstr "Näytä kulunut/jäljellä"
 
 #: src/window.blp:442
 msgid "Drag and Drop Files Here"
-msgstr ""
+msgstr "Vedä ja pudota tiedostot tähän"
 
 #: src/window.blp:455
 msgid "Open…"
-msgstr ""
+msgstr "Avaa…"
