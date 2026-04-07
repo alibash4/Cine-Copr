@@ -40,11 +40,14 @@ class Playlist(Adw.Dialog):
     playlist_clamp: Adw.Clamp = Gtk.Template.Child()
     playlist_list_box: Gtk.ListBox = Gtk.Template.Child()
     drop_indicator_revealer: Gtk.Revealer = Gtk.Template.Child()
+    save_playlist_btn: Gtk.Button = Gtk.Template.Child()
 
     def __init__(self, window, **kwargs):
         super().__init__(**kwargs)
         self.win = window
         self.mpv = window.mpv
+        uid = os.getuid()
+        self.doc_path = f"/run/user/{uid}/doc/"
 
         self.set_content_height(window.get_height())
 
@@ -135,6 +138,17 @@ class Playlist(Adw.Dialog):
 
         for index, item in enumerate(playlist):
             path = item.get("filename")
+
+            if self.doc_path in path and self.save_playlist_btn.props.sensitive:
+                self.save_playlist_btn.set_tooltip_text(
+                    ("Save Playlist")
+                    + " - "
+                    + _(
+                        "Requires flatpak permission to read the folder where the video is stored"
+                    )
+                )
+                self.save_playlist_btn.set_sensitive(False)
+
             name_with_ext = os.path.basename(path)
             parent_dir = os.path.basename(os.path.dirname(path))
             dir = parent_dir if parent_dir else path
