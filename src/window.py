@@ -389,7 +389,10 @@ class CineWindow(Adw.ApplicationWindow):
             click_gesture.connect("cancel", self._cancel_click_hold)
             self.video_overlay.add_controller(click_gesture)
 
-        self.connect("notify::visible-dialog", self._cancel_click_hold)
+        self.connect(
+            "notify::visible-dialog",
+            lambda *a: (self._cancel_click_hold(*a), self._hide_ui_timeout(*a)),
+        )
 
         scroll_controller_overlay = Gtk.EventControllerScroll.new(
             Gtk.EventControllerScrollFlags.BOTH_AXES
