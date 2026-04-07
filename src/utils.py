@@ -36,6 +36,17 @@ LAST_PLAYLIST_FILE = os.path.join(CONFIG_DIR, "last-playlist.m3u8")
 os.makedirs(CONFIG_DIR, exist_ok=True)
 
 
+def get_mouse_bindings(mpv):
+    bindings = mpv._get_property("input-bindings")
+    active_mouse_bindings = {}
+
+    for b in bindings:
+        if "MBTN" in b["key"]:
+            active_mouse_bindings[b["key"]] = b["cmd"]
+
+    return active_mouse_bindings
+
+
 def is_local_path(path):
     parsed = urlparse(str(path))
     if not parsed.scheme or parsed.scheme == "file" or len(parsed.scheme) == 1:
