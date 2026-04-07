@@ -366,12 +366,10 @@ class CineWindow(Adw.ApplicationWindow):
 
     def _setup_event_handlers(self):
         key_controller = Gtk.EventControllerKey()
-        key_controller.connect("key-pressed", self._on_key_event, "keydown")
+        key_controller.connect("key-pressed", self._on_key_event, "keypress")
         key_controller.connect("key-released", self._on_key_event, "keyup")
         key_controller.set_propagation_phase(Gtk.PropagationPhase.CAPTURE)
         self.add_controller(key_controller)
-
-        self.connect("notify::is-active", self._on_window_active_changed)
 
         progress_hover = Gtk.EventControllerMotion()
         progress_hover.connect("motion", self._on_progress_motion)
@@ -1293,35 +1291,24 @@ class CineWindow(Adw.ApplicationWindow):
         else:
             self.unfullscreen()
 
-    def _on_window_active_changed(self, *args):
-        if not self.pressed_keys or self.props.is_active:
-            return
-        for keyval in self.pressed_keys:
-            try:
-                self.mpv.command_async("keyup", keyval)
-            except:
-                pass
-        self.pressed_keys.clear()
-
     def _on_key_event(self, _controller, keyval, _keycode, state, event_type):
-        if event_type == "keydown":
-            if keyval in self.pressed_keys:
-                return
-            self.pressed_keys.add(keyval)
-        else:
-            self.pressed_keys.discard(keyval)
-
         key_name = Gdk.keyval_name(keyval)
 
-        if event_type == "keydown":
-            if key_name == "Escape":
-                self.mpv.fullscreen = False
-                return
-            if key_name in ("Tab", "ISO_Left_Tab", "Return"):
-                self.revealer_ui.set_reveal_child(True)
-                self._hide_ui_timeout(s=3)
-                return
-        elif key_name in ("Escape", "Tab", "ISO_Left_Tab", "Return"):
+        if event_type == "keyup":
+            self.pressed_keys.discard(keyval)
+            return
+
+        if key_name == "space" and keyval in self.pressed_keys:
+            return  # don't repeat space
+
+        self.pressed_keys.add(keyval)
+
+        if key_name == "Escape":
+            self.mpv.fullscreen = False
+            return
+        elif key_name in ("Tab", "ISO_Left_Tab", "Return"):
+            self.revealer_ui.set_reveal_child(True)
+            self._hide_ui_timeout(s=3)
             return
 
         clean_state = state & Gtk.accelerator_get_default_mod_mask()
@@ -1347,8 +1334,8 @@ class CineWindow(Adw.ApplicationWindow):
         try:
             self.mpv.command_async(event_type, full_combo)
             return True
-        except Exception:
-            return
+        except:
+            pass
 
     def _on_click_pressed(self, gesture, n_press, _x, _y):
         gtk_button = gesture.get_button()
