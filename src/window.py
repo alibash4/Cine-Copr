@@ -1768,6 +1768,7 @@ class CineWindow(Adw.ApplicationWindow):
                 self.gl_area.set_visible(not is_idle)
 
                 if is_idle:
+                    self.error_count = 0
                     self.revealer_ui.set_reveal_child(True)
                     self.set_title(_("Cine"))
                     self.hide_icon_indicator = True
